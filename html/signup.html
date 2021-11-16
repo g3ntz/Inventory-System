@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inventory System - Sign Up</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/home.css" />
   </head>
   <body>
     <header>
@@ -25,20 +26,38 @@
       <section class="right-section">
         <div class="card-container">
           <h2>Create your Account</h2>
-          <form action="">
+          <form id="signup-form" action="">
             <div class="input-group">
               <label for="username">Username</label>
-              <input id="username" type="text" name="username" id="" />
+              <input
+                id="username"
+                type="text"
+                name="username"
+                maxlength="20"
+              />
+              <small>Error message</small>
             </div>
 
             <div class="input-group">
               <label for="email">Email</label>
-              <input id="email" type="email" name="email" id="" />
+              <input
+                id="email"
+                type="email"
+                name="email"
+                maxlength="50"
+              />
+              <small>Error message</small>
             </div>
 
             <div class="input-group">
               <label for="password">Password</label>
-              <input id="password" type="password" name="password" id="" />
+              <input
+                id="password"
+                type="password"
+                name="password"
+                maxlength="40"
+              />
+              <small>Error message</small>
             </div>
 
             <div class="input-group">
@@ -47,8 +66,10 @@
                 id="confirmPassword"
                 type="password"
                 name="confirmPassword"
-                id=""
+                maxlength="40"
+               
               />
+              <small>Error message</small>
             </div>
 
             <button type="submit">Sign Up</button>
@@ -59,7 +80,8 @@
           <a class="text-link" href="login.html">Login</a>
         </p>
       </section>
-      
     </main>
+
+    <script type="module" src="../../js/signupValidation.js"></script>
   </body>
 </html>

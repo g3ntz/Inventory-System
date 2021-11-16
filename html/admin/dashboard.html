@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory System - Dashboard</title>
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/admin.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo-container">
+        <img src="../../images/logo-img.png" alt="" />
+        <h1>INVENTORY</h1>
+      </div>
+
+      <div class="menu">
+        <ul>
+          <li class="nav-item active">
+            <a href="">
+              <img src="../../images/dashboard-icon.svg" alt="" />
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="">
+              <img src="../../images/inventory-icon.svg" alt="" />
+              <p>Inventory</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="">
+              <img src="../../images/products-icon.svg" alt="" />
+              <p>Products</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="">
+              <img src="../../images/users-icon.svg" alt="" />
+              <p>Users</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="logout">
+        <hr />
+        <div class="nav-item">
+          <a href="">
+            <img src="../../images/logout-icon.svg" alt="" />
+            <p>Log Out</p>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <header>
+        <h2>DASHBOARD</h2>
+        <div class="profile-item">
+          <div class="profile-infos">
+            <p class="profile-name">Filan Fisteku</p>
+            <p class="profile-email">Filan@gmail.com</p>
+          </div>
+
+          <div class="profile-img">
+            <img
+              src="../../images/avatar.png"
+              height="40px"
+              width="40px"
+              alt=""
+            />
+          </div>
+        </div>
+      </header>
+
+      <section class="page">
+        <div class="cards">
+          <div class="card">
+            <div class="card-head">
+              <div class="card-title">
+                <img
+                  src="../../images/users-icon-blue.svg"
+                  width="20px"
+                  height="20px"
+                  alt=""
+                />
+                <p>Users</p>
+              </div>
+
+              <div class="card-link">
+                <a href="">
+                  <p>View All</p>
+                  <img src="../../images/right-arrow-icon.svg" alt="" />
+                </a>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="stat-item">
+                <p class="value">2</p>
+                <p class="text">Today:</p>
+              </div>
+
+              <div class="stat-item">
+                <p class="value">17</p>
+                <p class="text">Last Week:</p>
+              </div>
+
+              <div class="stat-item">
+                <p class="value">43</p>
+                <p class="text">Last Month:</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-head">
+              <div class="card-title">
+                <img
+                  src="../../images/users-icon-blue.svg"
+                  width="20px"
+                  height="20px"
+                  alt=""
+                />
+                <p>Users</p>
+              </div>
+
+              <div class="card-link">
+                <a href="">
+                  <p>View All</p>
+                  <img src="../../images/right-arrow-icon.svg" alt="" />
+                </a>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="stat-item">
+                <p class="value">2</p>
+                <p class="text">Today:</p>
+              </div>
+
+              <div class="stat-item">
+                <p class="value">17</p>
+                <p class="text">Last Week:</p>
+              </div>
+
+              <div class="stat-item">
+                <p class="value">43</p>
+                <p class="text">Last Month:</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-head">
+              <div class="card-title">
+                <img
+                  src="../../images/users-icon-blue.svg"
+                  width="20px"
+                  height="20px"
+                  alt=""
+                />
+                <p>Users</p>
+              </div>
+
+              <div class="card-link">
+                <a href="">
+                  <p>View All</p>
+                  <img src="../../images/right-arrow-icon.svg" alt="" />
+                </a>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="stat-item">
+                <p class="value">2</p>
+                <p class="text">Today:</p>
+              </div>
+
+              <div class="stat-item">
+                <p class="value">17</p>
+                <p class="text">Last Week:</p>
+              </div>
+
+              <div class="stat-item">
+                <p class="value">43</p>
+                <p class="text">Last Month:</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="width: 100%;">
+          <canvas id="myChart" height="300" width="300"></canvas>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const DATA_COUNT = 12;
+      const labels = [];
+      for (let i = 0; i < DATA_COUNT; ++i) {
+        labels.push(i.toString());
+      }
+      const datapoints = [
+        0,
+        20,
+        20,
+        60,
+        60,
+        120,
+        NaN,
+        180,
+        120,
+        125,
+        105,
+        110,
+        170,
+      ];
+      const data = {
+        labels: labels,
+        datasets: [
+          {
+            label: "Cubic interpolation (monotone)",
+            data: datapoints,
+            borderColor: '#245373',
+            fill: false,
+            cubicInterpolationMode: "monotone",
+            tension: 0.4,
+          },
+          {
+            label: "Cubic interpolation",
+            data: datapoints,
+            borderColor: '#245373',
+            fill: false,
+            tension: 0.4,
+          },
+          {
+            label: "Linear interpolation (default)",
+            data: datapoints,
+            borderColor: '#245373',
+            fill: false,
+          },
+        ],
+      };
+
+      const config = {
+        type: "line",
+        data: data,
+        options: {
+          responsive: true,
+          plugins: {
+            title: {
+              display: true,
+              text: "Chart.js Line Chart - Cubic interpolation mode",
+            },
+          },
+          interaction: {
+            intersect: false,
+          },
+          scales: {
+            x: {
+              display: true,
+              title: {
+                display: true,
+              },
+            },
+            y: {
+              display: true,
+              title: {
+                display: true,
+                text: "Value",
+              },
+              suggestedMin: -10,
+              suggestedMax: 200,
+            },
+          },
+        },
+      };
+      const myChart = new Chart(document.getElementById("myChart"), config);
+    </script>
+  </body>
+</html>

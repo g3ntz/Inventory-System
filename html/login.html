@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inventory System - Login</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/home.css" />
   </head>
   <body>
     <header>
@@ -25,15 +26,17 @@
       <section class="right-section">
         <div class="card-container">
           <h2>Login to Continue</h2>
-          <form action="">
+          <form id="login-form" action="">
             <div class="input-group">
               <label for="username">Username</label>
               <input id="username" type="text" name="username" id="" />
+              <small>Error message</small>
             </div>
 
             <div class="input-group">
               <label for="password">Password</label>
               <input id="password" type="password" name="password" id="" />
+              <small>Error message</small>
             </div>
 
             <div class="forgot-password">
@@ -48,7 +51,8 @@
           <a class="text-link" href="signup.html">Sign Up</a>
         </p>
       </section>
-      
+
     </main>
+    <script type="module" src="../js/loginValidation.js"></script>
   </body>
 </html>
