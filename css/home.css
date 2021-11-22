@@ -16,9 +16,9 @@ header {
 .logo-text {
   color: var(--clr-primary);
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
   margin-left: 10px;
-  font-size: 1.4em;
+  font-size: 1.3em;
 }
 
 main {

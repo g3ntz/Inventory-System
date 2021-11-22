@@ -5,11 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inventory System - Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../../css/style.css" />
-    <link rel="stylesheet" href="../../css/admin.css" />
+    <link rel="stylesheet" href="../../css/admin/dashboard.css" />
   </head>
   <body>
-    <nav>
+    <i id="show-nav" class="fas fa-bars"></i>
+    <nav id="left-nav">
       <div class="logo-container">
         <img src="../../images/logo-img.png" alt="" />
         <h1>INVENTORY</h1>
@@ -31,7 +33,54 @@
           </li>
           <li class="nav-item">
             <a href="">
-              <img src="../../images/products-icon.svg" alt="" />
+              <img src="../../images/products-icon-light.svg" alt="" />
+              <p>Products</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="">
+              <img src="../../images/users-icon.svg" alt="" />
+              <p>Users</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="logout">
+        <hr />
+        <div class="nav-item">
+          <a href="">
+            <img src="../../images/logout-icon.svg" alt="" />
+            <p>Log Out</p>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <nav id="main-nav">
+      <i id="hide-nav" class="fas fa-times"></i>
+      <div class="logo-container">
+        <img src="../../images/logo-img.png" alt="" />
+        <h1>INVENTORY</h1>
+      </div>
+
+      <div class="menu">
+        <ul>
+          <li class="nav-item active">
+            <a href="">
+              <img src="../../images/dashboard-icon.svg" alt="" />
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="">
+              <img src="../../images/inventory-icon.svg" alt="" />
+              <p>Inventory</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="">
+              <img src="../../images/products-icon-light.svg" alt="" />
               <p>Products</p>
             </a>
           </li>
@@ -119,12 +168,12 @@
             <div class="card-head">
               <div class="card-title">
                 <img
-                  src="../../images/users-icon-blue.svg"
+                  src="../../images/products-icon-dark.svg"
                   width="20px"
                   height="20px"
                   alt=""
                 />
-                <p>Users</p>
+                <p>Products</p>
               </div>
 
               <div class="card-link">
@@ -137,17 +186,17 @@
 
             <div class="card-body">
               <div class="stat-item">
-                <p class="value">2</p>
+                <p class="value">8</p>
                 <p class="text">Today:</p>
               </div>
 
               <div class="stat-item">
-                <p class="value">17</p>
+                <p class="value">35</p>
                 <p class="text">Last Week:</p>
               </div>
 
               <div class="stat-item">
-                <p class="value">43</p>
+                <p class="value">74</p>
                 <p class="text">Last Month:</p>
               </div>
             </div>
@@ -157,12 +206,12 @@
             <div class="card-head">
               <div class="card-title">
                 <img
-                  src="../../images/users-icon-blue.svg"
+                  src="../../images/inventory-icon-dark.svg"
                   width="20px"
                   height="20px"
                   alt=""
                 />
-                <p>Users</p>
+                <p>Inventories</p>
               </div>
 
               <div class="card-link">
@@ -175,25 +224,25 @@
 
             <div class="card-body">
               <div class="stat-item">
-                <p class="value">2</p>
+                <p class="value">7</p>
                 <p class="text">Today:</p>
               </div>
 
               <div class="stat-item">
-                <p class="value">17</p>
+                <p class="value">20</p>
                 <p class="text">Last Week:</p>
               </div>
 
               <div class="stat-item">
-                <p class="value">43</p>
+                <p class="value">33</p>
                 <p class="text">Last Month:</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div style="width: 100%;">
-          <canvas id="myChart" height="300" width="300"></canvas>
+        <div class="chart">
+          <canvas id="myChart" width="600" height="230"></canvas>
         </div>
       </section>
     </main>
@@ -212,7 +261,7 @@
         60,
         60,
         120,
-        NaN,
+        150,
         180,
         120,
         125,
@@ -224,24 +273,24 @@
         labels: labels,
         datasets: [
           {
-            label: "Cubic interpolation (monotone)",
+            label: "Purchased",
             data: datapoints,
-            borderColor: '#245373',
+            borderColor: '#0D3C5C',
             fill: false,
             cubicInterpolationMode: "monotone",
             tension: 0.4,
           },
           {
-            label: "Cubic interpolation",
+            label: "Remaining",
             data: datapoints,
-            borderColor: '#245373',
+            borderColor: '#D01818',
             fill: false,
             tension: 0.4,
           },
           {
-            label: "Linear interpolation (default)",
+            label: "Used",
             data: datapoints,
-            borderColor: '#245373',
+            borderColor: '#1AB394',
             fill: false,
           },
         ],
@@ -251,6 +300,7 @@
         type: "line",
         data: data,
         options: {
+          maintainAspectRatio: false,
           responsive: true,
           plugins: {
             title: {
@@ -274,13 +324,34 @@
                 display: true,
                 text: "Value",
               },
-              suggestedMin: -10,
+              suggestedMin: 0,
               suggestedMax: 200,
             },
           },
         },
       };
       const myChart = new Chart(document.getElementById("myChart"), config);
+      
+    </script>
+
+    <script>
+      let nav = document.getElementById('main-nav');
+      let btnShow = document.getElementById('show-nav');
+      let btnHide = document.getElementById('hide-nav');
+
+      document.getElementById('show-nav').addEventListener("click", function(){
+        nav.style.transform = 'translateX(0)';
+        nav.style.opacity = 1;
+        nav.style.visibility = 'visible';
+        btnHide.style.display = "inline-block";
+      })
+
+      document.getElementById('hide-nav').addEventListener("click", function(){
+        nav.style.transform = 'translateX(-100%)';
+        nav.style.opacity = 0;
+        nav.style.visibility = 'hidden';
+        btnHide.style.display = "none";
+      })
     </script>
   </body>
 </html>
