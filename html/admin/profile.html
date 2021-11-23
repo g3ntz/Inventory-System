@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory System - Profile</title>
+
+    <!-- STYLESHEETS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/admin/general.css" />
+    <link rel="stylesheet" href="../../css/admin/profile.css" />
+  </head>
+  <body>
+    <i id="show-nav" class="fas fa-bars"></i>
+    <nav id="left-nav">
+      <div class="logo-container">
+        <img src="../../images/logo-img.png" alt="" />
+        <h1>INVENTORY</h1>
+      </div>
+
+      <div class="menu">
+        <ul>
+          <li class="nav-item">
+            <a href="../admin/dashboard.html">
+              <img src="../../images/dashboard-icon.svg" alt="" />
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./inventory.html">
+              <img src="../../images/inventory-icon.svg" alt="" />
+              <p>Inventory</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./products.html">
+              <img src="../../images/products-icon-light.svg" alt="" />
+              <p>Products</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./users.html">
+              <img src="../../images/users-icon.svg" alt="" />
+              <p>Users</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="logout">
+        <hr />
+        <div class="nav-item">
+          <a href="../../html/home/login.html">
+            <img src="../../images/logout-icon.svg" alt="" />
+            <p>Log Out</p>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <nav id="main-nav">
+      <i id="hide-nav" class="fas fa-times"></i>
+      <div class="logo-container">
+        <img src="../../images/logo-img.png" alt="" />
+        <h1>INVENTORY</h1>
+      </div>
+
+      <div class="menu">
+        <ul>
+          <li class="nav-item">
+            <a href="../admin/dashboard.html">
+              <img src="../../images/dashboard-icon.svg" alt="" />
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./inventory.html">
+              <img src="../../images/inventory-icon.svg" alt="" />
+              <p>Inventory</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./products.html">
+              <img src="../../images/products-icon-light.svg" alt="" />
+              <p>Products</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./users.html">
+              <img src="../../images/users-icon.svg" alt="" />
+              <p>Users</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="logout">
+        <hr />
+        <div class="nav-item">
+          <a href="../../html/home/login.html">
+            <img src="../../images/logout-icon.svg" alt="" />
+            <p>Log Out</p>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <header>
+        <h2>MY PROFILE</h2>
+        <div class="profile-item">
+          <div class="profile-infos">
+            <p class="profile-name">Filan Fisteku</p>
+            <p class="profile-email">Filan@gmail.com</p>
+          </div>
+
+          <div class="profile-img">
+            <img
+              src="../../images/avatar.png"
+              height="40px"
+              width="40px"
+              alt=""
+            />
+          </div>
+        </div>
+      </header>
+
+      <section class="page">
+        <div class="card-container">
+          <h2>Edit Your Profile Infos</h2>
+
+          <form id="profile-form" action="">
+
+            <div class="input-group">
+              <label for="username">Username</label>
+              <input id="username" type="text" name="username" value="Filan" />
+              <small>Error message</small>
+            </div>
+
+            <div class="input-group">
+              <label for="email">Email</label>
+              <input id="email" type="email" name="email" maxlength="50" value="Filan@gmail.com" />
+              <small>Error message</small>
+            </div>
+
+            <div class="input-group">
+              <label for="password">Password</label>
+              <input id="password" type="password" name="password" value="Password123" />
+              <small>Error message</small>
+            </div>
+
+            <div class="input-group">
+              <label for="confirmPassword">Confirm Password</label>
+              <input
+                id="confirmPassword"
+                type="password"
+                name="confirmPassword"
+                maxlength="40"
+                value="Password123" 
+              />
+              <small>Error message</small>
+            </div>
+
+            <div class="input-group">
+                <label for="status">Status</label>
+                <select name="status" id="status" disabled>
+                    <option value="Active">Active</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="role">Role</label>
+                <select name="role" id="role" disabled>
+                    <option value="User">User</option>
+                </select>
+            </div>
+            
+
+            <button type="submit">Save Changes</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="../../js/home/profileValidation.js"></script>
+    <script src="../../js/admin/left-menu.js"></script>
+  </body>
+</html>

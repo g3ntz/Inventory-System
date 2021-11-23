@@ -1,0 +1,64 @@
+.page {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.card-container {
+  width: 550px;
+  padding: 40px 20px 20px 30px;
+}
+
+.card-container h2 {
+  font-size: 1.5em;
+}
+
+button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px;
+}
+
+.input-group small {
+  font-size: 0.6em;
+  margin-top: -10px;
+  margin-bottom: 5px;
+  display: block;
+  color: red;
+  opacity: 0;
+  transform: translateX(10%);
+  transition: all 0.5s ease;
+}
+
+select {
+  display: block;
+  width: 100%;
+}
+
+input, select {
+  padding: 1.2vh;
+}
+
+.card-container {
+  padding: 3vh 1.5vw 2vh 1.5vw;
+}
+
+.card-container h2 {
+  margin-bottom: 2.5vh;
+}
+
+/* ------ MEDIA QUERIES -----------*/
+@media screen and (max-width: 610px) {
+  .card-container {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .card-container h2 {
+    font-size: 1em;
+  }
+
+  .page {
+    padding: 0 10px;
+  }
+}

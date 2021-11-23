@@ -5,8 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inventory System - Dashboard</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/admin/general.css" />
     <link rel="stylesheet" href="../../css/admin/dashboard.css" />
   </head>
   <body>
@@ -20,25 +27,25 @@
       <div class="menu">
         <ul>
           <li class="nav-item active">
-            <a href="">
+            <a href="../admin/dashboard.html">
               <img src="../../images/dashboard-icon.svg" alt="" />
               <p>Dashboard</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="">
+            <a href="./inventory.html">
               <img src="../../images/inventory-icon.svg" alt="" />
               <p>Inventory</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="">
+            <a href="./products.html">
               <img src="../../images/products-icon-light.svg" alt="" />
               <p>Products</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="">
+            <a href="./users.html">
               <img src="../../images/users-icon.svg" alt="" />
               <p>Users</p>
             </a>
@@ -49,7 +56,7 @@
       <div class="logout">
         <hr />
         <div class="nav-item">
-          <a href="">
+          <a href="../../html/home/login.html">
             <img src="../../images/logout-icon.svg" alt="" />
             <p>Log Out</p>
           </a>
@@ -67,25 +74,25 @@
       <div class="menu">
         <ul>
           <li class="nav-item active">
-            <a href="">
+            <a href="../admin/dashboard.html">
               <img src="../../images/dashboard-icon.svg" alt="" />
               <p>Dashboard</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="">
+            <a href="./inventory.html">
               <img src="../../images/inventory-icon.svg" alt="" />
               <p>Inventory</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="">
+            <a href="./products.html">
               <img src="../../images/products-icon-light.svg" alt="" />
               <p>Products</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="">
+            <a href="./users.html">
               <img src="../../images/users-icon.svg" alt="" />
               <p>Users</p>
             </a>
@@ -96,7 +103,7 @@
       <div class="logout">
         <hr />
         <div class="nav-item">
-          <a href="">
+          <a href="../../html/home/login.html">
             <img src="../../images/logout-icon.svg" alt="" />
             <p>Log Out</p>
           </a>
@@ -107,7 +114,7 @@
     <main>
       <header>
         <h2>DASHBOARD</h2>
-        <div class="profile-item">
+        <a href="../admin/profile.html" class="profile-item">
           <div class="profile-infos">
             <p class="profile-name">Filan Fisteku</p>
             <p class="profile-email">Filan@gmail.com</p>
@@ -121,7 +128,7 @@
               alt=""
             />
           </div>
-        </div>
+        </a>
       </header>
 
       <section class="page">
@@ -255,19 +262,7 @@
         labels.push(i.toString());
       }
       const datapoints = [
-        0,
-        20,
-        20,
-        60,
-        60,
-        120,
-        150,
-        180,
-        120,
-        125,
-        105,
-        110,
-        170,
+        0, 20, 20, 60, 60, 120, 150, 180, 120, 125, 105, 110, 170,
       ];
       const data = {
         labels: labels,
@@ -275,7 +270,7 @@
           {
             label: "Purchased",
             data: datapoints,
-            borderColor: '#0D3C5C',
+            borderColor: "#0D3C5C",
             fill: false,
             cubicInterpolationMode: "monotone",
             tension: 0.4,
@@ -283,14 +278,14 @@
           {
             label: "Remaining",
             data: datapoints,
-            borderColor: '#D01818',
+            borderColor: "#D01818",
             fill: false,
             tension: 0.4,
           },
           {
             label: "Used",
             data: datapoints,
-            borderColor: '#1AB394',
+            borderColor: "#1AB394",
             fill: false,
           },
         ],
@@ -305,7 +300,7 @@
           plugins: {
             title: {
               display: true,
-              text: "Chart.js Line Chart - Cubic interpolation mode",
+              text: "",
             },
           },
           interaction: {
@@ -331,27 +326,8 @@
         },
       };
       const myChart = new Chart(document.getElementById("myChart"), config);
-      
     </script>
 
-    <script>
-      let nav = document.getElementById('main-nav');
-      let btnShow = document.getElementById('show-nav');
-      let btnHide = document.getElementById('hide-nav');
-
-      document.getElementById('show-nav').addEventListener("click", function(){
-        nav.style.transform = 'translateX(0)';
-        nav.style.opacity = 1;
-        nav.style.visibility = 'visible';
-        btnHide.style.display = "inline-block";
-      })
-
-      document.getElementById('hide-nav').addEventListener("click", function(){
-        nav.style.transform = 'translateX(-100%)';
-        nav.style.opacity = 0;
-        nav.style.visibility = 'hidden';
-        btnHide.style.display = "none";
-      })
-    </script>
+    <script src="../../js/admin/left-menu.js"></script>
   </body>
 </html>

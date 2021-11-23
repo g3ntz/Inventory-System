@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory System - Products</title>
+
+    <!-- STYLESHEETS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/admin/general.css" />
+    <link rel="stylesheet" href="../../css/admin/products.css" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css"
+    />
+
+    <script
+      type="text/javascript"
+      language="javascript"
+      src="https://code.jquery.com/jquery-3.5.1.js"
+    ></script>
+    <script
+      type="text/javascript"
+      language="javascript"
+      src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      language="javascript"
+      src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $("#example").DataTable({
+          responsive: true,
+          columnDefs: [
+            { responsivePriority: 1, targets: -1, orderable: false }
+          ]
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <i id="show-nav" class="fas fa-bars"></i>
+    <nav id="left-nav">
+      <div class="logo-container">
+        <img src="../../images/logo-img.png" alt="" />
+        <h1>INVENTORY</h1>
+      </div>
+
+      <div class="menu">
+        <ul>
+          <li class="nav-item">
+            <a href="../admin/dashboard.html">
+              <img src="../../images/dashboard-icon.svg" alt="" />
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./inventory.html">
+              <img src="../../images/inventory-icon.svg" alt="" />
+              <p>Inventory</p>
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a href="./products.html">
+              <img src="../../images/products-icon-light.svg" alt="" />
+              <p>Products</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./users.html">
+              <img src="../../images/users-icon.svg" alt="" />
+              <p>Users</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="logout">
+        <hr />
+        <div class="nav-item">
+          <a href="../../html/home/login.html">
+            <img src="../../images/logout-icon.svg" alt="" />
+            <p>Log Out</p>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <nav id="main-nav">
+      <i id="hide-nav" class="fas fa-times"></i>
+      <div class="logo-container">
+        <img src="../../images/logo-img.png" alt="" />
+        <h1>INVENTORY</h1>
+      </div>
+
+      <div class="menu">
+        <ul>
+          <li class="nav-item">
+            <a href="../admin/dashboard.html">
+              <img src="../../images/dashboard-icon.svg" alt="" />
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./inventory.html">
+              <img src="../../images/inventory-icon.svg" alt="" />
+              <p>Inventory</p>
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a href="./products.html">
+              <img src="../../images/products-icon-light.svg" alt="" />
+              <p>Products</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./users.html">
+              <img src="../../images/users-icon.svg" alt="" />
+              <p>Users</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="logout">
+        <hr />
+        <div class="nav-item">
+          <a href="../../html/home/login.html">
+            <img src="../../images/logout-icon.svg" alt="" />
+            <p>Log Out</p>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <header>
+        <h2>PRODUCTS</h2>
+        <a href="../admin/profile.html" class="profile-item">
+          <div class="profile-infos">
+            <p class="profile-name">Filan Fisteku</p>
+            <p class="profile-email">Filan@gmail.com</p>
+          </div>
+
+          <div class="profile-img">
+            <img
+              src="../../images/avatar.png"
+              height="40px"
+              width="40px"
+              alt=""
+            />
+          </div>
+        </a>
+      </header>
+
+      <section class="page">
+        <div class="actions">
+          <button>Add New</button>
+        </div>
+
+        <div class="table">
+          <table id="example" class="display nowrap" style="width: 100%">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Category</th>
+                <th>Stock</th>
+                <th>Date Created</th>
+                <th>Owner</th>
+                <th>Price</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>12</td>
+                <td>HyperX Headset</td>
+                <td title="HyperX Cloud headset is a PlayStation® Official Licensed Product. Experience HyperX signature comfort with its plush memory foam ear cushions wrapped in premium leatherette. Immersive yourself in the game world with crystal-clear audio and enhanced bass">HyperX Cloud headset is a PlayStation® Official Licensed Product. Experience HyperX signature comfort with its plush memory foam ear cushions wrapped in premium leatherette. Immersive yourself in the game world with crystal-clear audio and enhanced bass</td>
+                <td>Electronics</td>
+                <td>22</td>
+                <td>15/12/2020</td>
+                <td>Filan Fisteku</td>
+                <td>$120,00</td>
+                <td>
+                  <div class="buttons">
+                    <i class="fas fa-pen"></i>
+                    <i class="fas fa-trash-alt" style="color: red"></i>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="../../js/admin/left-menu.js"></script>
+  </body>
+</html>

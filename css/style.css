@@ -1,6 +1,4 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"); */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap");
 
 :root {
   --clr-primary: #1ab394;
@@ -10,8 +8,8 @@
   --clr-gray-dark: #e5e5e5;
   --clr-gray-light: #fcfcfc;
   --clr-blue-dark: #051521;
-  --clr-blue-semi-dark: #0D3C5C;
-  --clr-blue-light: #BBDFD8;
+  --clr-blue-semi-dark: #0d3c5c;
+  --clr-blue-light: #bbdfd8;
 }
 
 * {
@@ -36,4 +34,85 @@ a {
   text-decoration: none;
   display: inline-block;
   color: inherit;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease-in;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+input,
+select {
+  display: inline-block;
+  padding: 10px;
+  outline: none;
+  border: 1px solid var(--clr-gray-dark);
+  border-radius: 4px 4px 0 0;
+  margin-bottom: 15px;
+  background-color: var(--clr-gray-light);
+  transition: all 0.2s ease;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 3px solid var(--clr-secondary-light);
+}
+
+.card-container {
+  background-color: var(--clr-white);
+  width: 350px;
+  padding: 10% 5% 10%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 12px 0px rgba(26, 179, 148, 0.39);
+}
+
+.card-container h2 {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--clr-secondary-dark);
+  font-weight: 500;
+  margin-bottom: 1.5em;
+}
+
+.card-container input {
+  width: 100%;
+}
+
+.input-group label {
+  font-size: 0.7em;
+  font-weight: 500;
+  color: var(--clr-secondary-dark);
+}
+
+.input-group.success input {
+  border-color: green;
+}
+
+.input-group.error input {
+  border-color: red;
+}
+
+.input-group small {
+  font-size: 0.6em;
+  margin-top: -10px;
+  margin-bottom: 5px;
+  display: block;
+  color: red;
+  opacity: 0;
+  transform: translateX(10%);
+  transition: all 0.5s ease;
 }
