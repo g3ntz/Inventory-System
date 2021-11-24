@@ -13,24 +13,36 @@ form.addEventListener("submit", (e) => {
 });
 
 function checkInputs() {
+  let noErrors = true;
   const usernameValue = username.value.trim();
   const passwordValue = password.value.trim();
 
   // USERNAME
   if (usernameValue === "") {
     setErrorFor(username, "Username is required.");
+    noErrors = false;
   } else if (usernameValue.length < 4) {
     setErrorFor(username, "Min 4 characters for Username.");
+    noErrors = false;
   } else {
     setSuccessFor(username);
+    noErrors = true;
   }
 
   // PASSWORD
   if (passwordValue === "") {
     setErrorFor(password, "Password is required.");
-  } else if (passwordValue.length < 6) {
-    setErrorFor(password, "Min 6 characters for Password.");
+    noErrors = false;
+  } else if (passwordValue.length < 8) {
+    setErrorFor(password, "Min 8 characters for Password.");
+    noErrors = false;
   } else {
     setSuccessFor(password);
+    noErrors = true;
+  }
+
+  // REDIRECT TO DASHBOARD
+  if(noErrors){
+    window.location.href = "/html/admin/dashboard.html";
   }
 }

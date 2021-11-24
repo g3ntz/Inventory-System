@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inventory System - Inventory Form</title>
+    <title>Inventory System - Product Form</title>
 
     <link
       rel="stylesheet"
@@ -33,13 +33,13 @@
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item active">
+          <li class="nav-item">
             <a href="./inventory.html">
               <img src="../../images/inventory-icon.svg" alt="" />
               <p>Inventory</p>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a href="./products.html">
               <img src="../../images/products-icon-light.svg" alt="" />
               <p>Products</p>
@@ -80,13 +80,13 @@
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item active">
+          <li class="nav-item">
             <a href="./inventory.html">
               <img src="../../images/inventory-icon.svg" alt="" />
               <p>Inventory</p>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a href="./products.html">
               <img src="../../images/products-icon-light.svg" alt="" />
               <p>Products</p>
@@ -114,7 +114,7 @@
 
     <main>
       <header>
-        <h2>Create Inventory</h2>
+        <h2>Create Product</h2>
         <a href="../admin/profile.html" class="profile-item">
           <div class="profile-infos">
             <p class="profile-name">Filan Fisteku</p>
@@ -134,43 +134,54 @@
 
       <section class="page">
         <div class="card-container">
-            <h2>Create a new Inventory</h2>
-  
-            <form id="profile-form" action="">
-  
-              <div class="input-group">
-                <label for="receiver">Receiver</label>
-                <input id="receiver" type="text" name="receiver" />
-                <small>Error message</small>
-              </div>
-  
-              <div class="input-group">
-                <label for="product">Product</label>
-                <input id="product" type="text" name="product"/>
-                <small>Error message</small>
-              </div>
-  
-              <div class="input-group">
-                <label for="quantity">Quantity</label>
-                <input id="quantity" type="number" name="quantity"/>
-                <small>Error message</small>
-              </div>
+          <h2>Create a new Product</h2>
 
-              <div class="input-group">
-                <label for="receivedNote">Rejected Note</label>
-                <textarea name="receivedNote" id="receivedNote" cols="30" rows="2"></textarea>
-                <small>Error message</small>
-              </div> 
-              
-              <div class="input-group">
-                <label for="rejectedNote">Rejected Note</label>
-                <textarea name="rejectedNote" id="rejectedNote" cols="30" rows="2"></textarea>
-                <small>Error message</small>
-              </div>  
-  
-              <button type="submit">Create Inventory</button>
-            </form>
-          </div>
+          <form id="profile-form" action="">
+            <div class="input-group">
+              <label for="name">Name</label>
+              <input id="name" type="text" name="name" />
+              <small>Error message</small>
+            </div>
+
+            <div class="input-group">
+              <label for="description">Description</label>
+              <textarea
+                name="description"
+                id="description"
+                cols="30"
+                rows="2"
+              ></textarea>
+              <small>Error message</small>
+            </div>
+
+            <div class="input-group">
+              <label for="serialNr">Serial Nr</label>
+              <input id="serialNr" type="text" name="serialNr" />
+              <small>Error message</small>
+            </div>
+
+            <div class="input-group">
+              <label for="stock">Stock</label>
+              <input id="stock" type="number" name="stock" />
+              <small>Error message</small>
+            </div>
+
+            <div class="input-group">
+              <label for="price">Price</label>
+              <input id="price" type="text" name="price" />
+              <small>Error message</small>
+            </div>
+
+            <div class="input-group">
+              <label for="category">Category</label>
+              <select name="category" id="category">
+                <option value="Electronics">Electronics</option>
+              </select>
+            </div>
+
+            <button type="submit">Create Inventory</button>
+          </form>
+        </div>
       </section>
     </main>
 

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory System - Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/admin/general.css" />
+    <link rel="stylesheet" href="../../css/admin/dashboard.css" />
+  </head>
+  <body>
+    <i id="show-nav" class="fas fa-bars"></i>
+    <nav id="left-nav">
+      <div class="logo-container">
+        <img src="../../images/logo-img.png" alt="" />
+        <h1>INVENTORY</h1>
+      </div>
+
+      <div class="menu">
+        <ul>
+          <li class="nav-item active">
+            <a href="../user/dashboard.html">
+              <img src="../../images/dashboard-icon.svg" alt="" />
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="../user/inventory.html">
+              <img src="../../images/inventory-icon.svg" alt="" />
+              <p>Inventory</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="logout">
+        <hr />
+        <div class="nav-item">
+          <a href="../../html/home/login.html">
+            <img src="../../images/logout-icon.svg" alt="" />
+            <p>Log Out</p>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <nav id="main-nav">
+      <i id="hide-nav" class="fas fa-times"></i>
+      <div class="logo-container">
+        <img src="../../images/logo-img.png" alt="" />
+        <h1>INVENTORY</h1>
+      </div>
+
+      <div class="menu">
+        <ul>
+          <li class="nav-item active">
+            <a href="../admin/dashboard.html">
+              <img src="../../images/dashboard-icon.svg" alt="" />
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./inventory.html">
+              <img src="../../images/inventory-icon.svg" alt="" />
+              <p>Inventory</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="logout">
+        <hr />
+        <div class="nav-item">
+          <a href="../../html/home/login.html">
+            <img src="../../images/logout-icon.svg" alt="" />
+            <p>Log Out</p>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <header>
+        <h2>DASHBOARD</h2>
+        <a href="../user/profile.html" class="profile-item">
+          <div class="profile-infos">
+            <p class="profile-name">Filan Fisteku</p>
+            <p class="profile-email">Filan@gmail.com</p>
+          </div>
+
+          <div class="profile-img">
+            <img
+              src="../../images/avatar.png"
+              height="40px"
+              width="40px"
+              alt=""
+            />
+          </div>
+        </a>
+      </header>
+
+      <section class="page">
+        <!-- <div class="cards">
+          <div class="card">
+            <div class="card-head">
+              <div class="card-title">
+                <img
+                  src="../../images/users-icon-blue.svg"
+                  width="20px"
+                  height="20px"
+                  alt=""
+                />
+                <p>Users</p>
+              </div>
+
+              <div class="card-link">
+                <a href="./users.html">
+                  <p>View All</p>
+                  <img src="../../images/right-arrow-icon.svg" alt="" />
+                </a>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="stat-item">
+                <p class="value">2</p>
+                <p class="text">Today:</p>
+              </div>
+
+              <div class="stat-item">
+                <p class="value">17</p>
+                <p class="text">Last Week:</p>
+              </div>
+
+              <div class="stat-item">
+                <p class="value">43</p>
+                <p class="text">Last Month:</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-head">
+              <div class="card-title">
+                <img
+                  src="../../images/products-icon-dark.svg"
+                  width="20px"
+                  height="20px"
+                  alt=""
+                />
+                <p>Products</p>
+              </div>
+
+              <div class="card-link">
+                <a href="./products.html">
+                  <p>View All</p>
+                  <img src="../../images/right-arrow-icon.svg" alt="" />
+                </a>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="stat-item">
+                <p class="value">8</p>
+                <p class="text">Today:</p>
+              </div>
+
+              <div class="stat-item">
+                <p class="value">35</p>
+                <p class="text">Last Week:</p>
+              </div>
+
+              <div class="stat-item">
+                <p class="value">74</p>
+                <p class="text">Last Month:</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-head">
+              <div class="card-title">
+                <img
+                  src="../../images/inventory-icon-dark.svg"
+                  width="20px"
+                  height="20px"
+                  alt=""
+                />
+                <p>Inventories</p>
+              </div>
+
+              <div class="card-link">
+                <a href="./inventory.html">
+                  <p>View All</p>
+                  <img src="../../images/right-arrow-icon.svg" alt="" />
+                </a>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="stat-item">
+                <p class="value">7</p>
+                <p class="text">Today:</p>
+              </div>
+
+              <div class="stat-item">
+                <p class="value">20</p>
+                <p class="text">Last Week:</p>
+              </div>
+
+              <div class="stat-item">
+                <p class="value">33</p>
+                <p class="text">Last Month:</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chart">
+          <canvas id="myChart" width="600" height="230"></canvas>
+        </div> -->
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const DATA_COUNT = 12;
+      const labels = [];
+      for (let i = 0; i < DATA_COUNT; ++i) {
+        labels.push(i.toString());
+      }
+      const datapoints = [
+        100, 20, 20, 60, 60, 120, 150, 180, 120, 125, 105, 110, 170,
+      ];
+
+      const data = {
+        labels: labels,
+        datasets: [
+          {
+            label: "Purchased",
+            data: datapoints,
+            borderColor: "#0D3C5C",
+            fill: false,
+            cubicInterpolationMode: "monotone",
+            tension: 0.4,
+          },
+          {
+            label: "Remaining",
+            data: datapoints,
+            borderColor: "#D01818",
+            fill: false,
+            tension: 0.4,
+          },
+          {
+            label: "Used",
+            data: datapoints,
+            borderColor: "#1AB394",
+            fill: false,
+          },
+        ],
+      };
+
+      const config = {
+        type: "line",
+        data: data,
+        options: {
+          maintainAspectRatio: false,
+          responsive: true,
+          plugins: {
+            title: {
+              display: true,
+              text: "",
+            },
+          },
+          interaction: {
+            intersect: false,
+          },
+          scales: {
+            x: {
+              display: true,
+              title: {
+                display: true,
+              },
+            },
+            y: {
+              display: true,
+              title: {
+                display: true,
+                text: "Value",
+              },
+              suggestedMin: 0,
+              suggestedMax: 200,
+            },
+          },
+        },
+      };
+      const myChart = new Chart(document.getElementById("myChart"), config);
+    </script>
+
+    <script src="../../js/admin/left-menu.js"></script>
+  </body>
+</html>
