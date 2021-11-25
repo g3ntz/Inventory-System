@@ -99,6 +99,10 @@ input:focus, textarea:focus {
   width: 100%;
 }
 
+.input-group {
+  overflow: hidden;
+}
+
 .input-group label {
   font-size: 0.7em;
   font-weight: 500;
