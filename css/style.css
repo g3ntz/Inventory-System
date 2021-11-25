@@ -65,6 +65,7 @@ textarea {
   border-radius: 4px 4px 0 0;
   margin-bottom: 15px;
   background-color: var(--clr-gray-light);
+  outline: none;
   transition: all 0.2s ease;
 }
 
@@ -75,7 +76,6 @@ textarea {
 }
 
 input:focus, textarea:focus {
-  outline: none;
   border-bottom: 3px solid var(--clr-secondary-light);
 }
 

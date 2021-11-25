@@ -5,15 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inventory System - Dashboard</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../../css/style.css" />
-    <link rel="stylesheet" href="../../css/admin/general.css" />
+    <link rel="stylesheet" href="../../css/general/structure.css" />
     <link rel="stylesheet" href="../../css/admin/dashboard.css" />
   </head>
   <body>
@@ -254,7 +250,10 @@
       </section>
     </main>
 
+    <!-- CHART CDN -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- CHART INIT -->
     <script>
       const DATA_COUNT = 12;
       const labels = [];
@@ -264,6 +263,12 @@
       const datapoints = [
         100, 20, 20, 60, 60, 120, 150, 180, 120, 125, 105, 110, 170,
       ];
+      const datapoints2 = [
+        100, 20, 20, 60, 150, 120, 150, 180, 120, 125, 105, 110, 170,
+      ];
+      const datapoints3 = [
+        30, 190, 20, 60, 150, 120, 10, 180, 120, 125, 105, 160, 170,
+      ];
 
       const data = {
         labels: labels,
@@ -272,22 +277,25 @@
             label: "Purchased",
             data: datapoints,
             borderColor: "#0D3C5C",
-            fill: false,
+            fill: true,
             cubicInterpolationMode: "monotone",
             tension: 0.4,
           },
           {
             label: "Remaining",
-            data: datapoints,
+            data: datapoints2,
             borderColor: "#D01818",
-            fill: false,
+            fill: true,
+            cubicInterpolationMode: "monotone",
             tension: 0.4,
           },
           {
             label: "Used",
-            data: datapoints,
+            data: datapoints3,
             borderColor: "#1AB394",
-            fill: false,
+            cubicInterpolationMode: "monotone",
+            fill: true,
+            tension: 0.4,
           },
         ],
       };
@@ -329,6 +337,7 @@
       const myChart = new Chart(document.getElementById("myChart"), config);
     </script>
 
+    <!-- NAVIGATION -->
     <script src="../../js/admin/left-menu.js"></script>
   </body>
 </html>

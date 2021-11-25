@@ -1,41 +1,24 @@
-.page {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
-
 .card-container {
   width: 550px;
   padding: 40px 20px 20px 30px;
 }
 
 .card-container h2 {
-  font-size: 1.5em;
+  font-size: 1.4em;
 }
 
 button {
-  width: 100%;
-  margin-top: 20px;
   padding: 15px;
-}
-
-.input-group small {
-  font-size: 0.6em;
-  margin-top: -10px;
-  margin-bottom: 5px;
-  display: block;
-  color: red;
-  opacity: 0;
-  transform: translateX(10%);
-  transition: all 0.5s ease;
 }
 
 select {
   display: block;
   width: 100%;
+  margin-bottom: 20px;
 }
 
-input, select {
+input,
+select {
   padding: 1.2vh;
 }
 
@@ -47,7 +30,12 @@ input, select {
   margin-bottom: 2.5vh;
 }
 
-/* ------ MEDIA QUERIES -----------*/
+.page {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
 @media screen and (max-width: 610px) {
   .card-container {
     width: 100%;

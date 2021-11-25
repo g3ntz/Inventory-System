@@ -1,0 +1,132 @@
+/* ---------- GENERAL PAGE STYLES ---------*/
+.actions {
+  margin-top: 15px;
+}
+
+.button {
+  width: 120px;
+}
+
+button {
+  margin-top: 0;
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.15));
+}
+
+/* --------- TABLE STYLES ---------*/
+td.sorting_1::before {
+  background-color: var(--clr-primary) !important;
+}
+
+.paginate_button {
+  background-color: var(--clr-primary);
+}
+
+.table {
+  margin-top: 30px;
+}
+
+td {
+  max-width: 350px;
+  overflow: hidden; /* this is what fixes the expansion */
+  text-overflow: ellipsis; /* not supported in all browsers, but I accepted the tradeoff */
+  word-wrap: break-word;
+}
+
+td:last-of-type {
+  display: flex;
+  justify-content: end;
+}
+
+td:last-of-type .buttons i:last-of-type {
+  margin-left: 20px;
+}
+
+.buttons i {
+  transition: all 0.3s ease;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.buttons i:hover {
+  transform: scale(1.4);
+}
+
+/* -------- MODAL STYLES ----------------*/
+.modal {
+  top: 30%;
+  position: absolute;
+  left: 40%;
+  transform: scale(0);
+  width: 40%;
+  background-color: #7ea6ca;
+  border-radius: 5px;
+  padding: 15px 30px;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(0px 10px 12px rgba(0, 0, 0, 0.45));
+  transition: all 0.3s ease;
+}
+
+.modal img {
+  width: 100px;
+  height: 100px;
+  color: inherit;
+}
+
+.modal p {
+  font-weight: 500;
+}
+
+.modal i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.modal button {
+  width: 30%;
+  margin-left: auto;
+  background-color: var(--clr-blue-semi-dark);
+}
+
+/* -------- DELETE MODAL -----------*/
+#deleteModal .actions {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#deleteModal .actions button:first-of-type {
+  background-color: #9d0000;
+}
+
+#deleteModal {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+#deleteModal button {
+  width: 40% !important;
+  margin-left: 0;
+}
+
+/* -------- VIEW NOTES MODAL --------*/
+#notesModal label {
+  align-self: start;
+}
+
+#notesModal {
+  gap: 10px;
+}
+
+/* ------- MEDIA QUERIES --------*/
+@media screen and (max-width: 890px) {
+  .button {
+    width: 100%;
+  }
+}
