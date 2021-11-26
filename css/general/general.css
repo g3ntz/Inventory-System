@@ -27,27 +27,18 @@ td.sorting_1::before {
 
 td {
   max-width: 350px;
-  overflow: hidden; /* this is what fixes the expansion */
-  text-overflow: ellipsis; /* not supported in all browsers, but I accepted the tradeoff */
+  overflow: hidden;
+  text-overflow: ellipsis;
   word-wrap: break-word;
 }
 
-td:last-of-type {
-  display: flex;
-  justify-content: end;
-}
-
-td:last-of-type .buttons i:last-of-type {
-  margin-left: 20px;
-}
-
-.buttons i {
+i {
   transition: all 0.3s ease;
   transform: scale(1.2);
   cursor: pointer;
 }
 
-.buttons i:hover {
+i:hover {
   transform: scale(1.4);
 }
 
@@ -125,7 +116,19 @@ td:last-of-type .buttons i:last-of-type {
 }
 
 /* ------- MEDIA QUERIES --------*/
+@media screen and (max-width: 1190px) {
+  .modal {
+    left: 38%;
+    width: 50%;
+  }
+}
+
 @media screen and (max-width: 890px) {
+  .modal {
+    left: 5%;
+    width: 90%;
+  }
+
   .button {
     width: 100%;
   }

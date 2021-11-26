@@ -29,7 +29,9 @@
         $("#example").DataTable({
           responsive: true,
           columnDefs: [
-            { responsivePriority: 1, targets: -1, orderable: false }
+            { width: "10px", targets: [-1,-2] },
+            { responsivePriority: 1, targets: -1, orderable: false },
+            { responsivePriority: 2, targets: -2, orderable: false }
           ]
         });
       });
@@ -170,6 +172,7 @@
                 <th>Owner</th>
                 <th>Price</th>
                 <th></th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
@@ -182,12 +185,8 @@
                 <td>15/12/2020</td>
                 <td>Filan Fisteku</td>
                 <td>$120,00</td>
-                <td>
-                  <div class="buttons">
-                    <a href="./productCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a>
-                    <i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i>
-                  </div>
-                </td>
+                <td><a href="./productCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a></td>
+                <td><i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i></td>
               </tr>
               <tr>
                 <td>12</td>
@@ -198,12 +197,8 @@
                 <td>15/12/2020</td>
                 <td>Filan Fisteku</td>
                 <td>$120,00</td>
-                <td>
-                  <div class="buttons">
-                    <a href="./productCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a>
-                    <i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i>
-                  </div>
-                </td>
+                <td><a href="./productCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a></td>
+                <td><i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i></td>
               </tr>
               <tr>
                 <td>12</td>
@@ -214,12 +209,8 @@
                 <td>15/12/2020</td>
                 <td>Filan Fisteku</td>
                 <td>$120,00</td>
-                <td>
-                  <div class="buttons">
-                    <a href="./productCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a>
-                    <i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i>
-                  </div>
-                </td>
+                <td><a href="./productCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a></td>
+                <td><i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i></td>
               </tr>
               <tr>
                 <td>12</td>
@@ -230,12 +221,8 @@
                 <td>15/12/2020</td>
                 <td>Filan Fisteku</td>
                 <td>$120,00</td>
-                <td>
-                  <div class="buttons">
-                    <a href="./productCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a>
-                    <i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i>
-                  </div>
-                </td>
+                <td><a href="./productCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a></td>
+                <td><i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i></td>
               </tr>
               <tr>
                 <td>12</td>
@@ -246,12 +233,8 @@
                 <td>15/12/2020</td>
                 <td>Filan Fisteku</td>
                 <td>$120,00</td>
-                <td>
-                  <div class="buttons">
-                    <a href="./productCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a>
-                    <i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i>
-                  </div>
-                </td>
+                <td><a href="./productCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a></td>
+                <td><i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i></td>
               </tr>
               <tr>
                 <td>12</td>
@@ -262,12 +245,8 @@
                 <td>15/12/2020</td>
                 <td>Filan Fisteku</td>
                 <td>$120,00</td>
-                <td>
-                  <div class="buttons">
-                    <a href="./productCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a>
-                    <i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i>
-                  </div>
-                </td>
+                <td><a href="./productCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a></td>
+                <td><i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i></td>
               </tr>
               <tr>
                 <td>12</td>
@@ -278,12 +257,8 @@
                 <td>15/12/2020</td>
                 <td>Filan Fisteku</td>
                 <td>$120,00</td>
-                <td>
-                  <div class="buttons">
-                    <a href="./productCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a>
-                    <i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i>
-                  </div>
-                </td>
+                <td><a href="./productCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a></td>
+                <td><i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i></td>
               </tr>
               <tr>
                 <td>12</td>
@@ -294,12 +269,8 @@
                 <td>15/12/2020</td>
                 <td>Filan Fisteku</td>
                 <td>$120,00</td>
-                <td>
-                  <div class="buttons">
-                    <a href="./productCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a>
-                    <i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i>
-                  </div>
-                </td>
+                <td><a href="./productCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a></td>
+                <td><i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i></td>
               </tr>
               <tr>
                 <td>12</td>
@@ -310,12 +281,8 @@
                 <td>15/12/2020</td>
                 <td>Filan Fisteku</td>
                 <td>$120,00</td>
-                <td>
-                  <div class="buttons">
-                    <a href="./productCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a>
-                    <i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i>
-                  </div>
-                </td>
+                <td><a href="./productCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a></td>
+                <td><i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i></td>
               </tr>
               <tr>
                 <td>12</td>
@@ -326,12 +293,8 @@
                 <td>15/12/2020</td>
                 <td>Filan Fisteku</td>
                 <td>$120,00</td>
-                <td>
-                  <div class="buttons">
-                    <a href="./productCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a>
-                    <i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i>
-                  </div>
-                </td>
+                <td><a href="./productCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a></td>
+                <td><i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i></td>
               </tr>
               <tr>
                 <td>12</td>
@@ -342,12 +305,8 @@
                 <td>15/12/2020</td>
                 <td>Filan Fisteku</td>
                 <td>$120,00</td>
-                <td>
-                  <div class="buttons">
-                    <a href="./productCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a>
-                    <i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i>
-                  </div>
-                </td>
+                <td><a href="./productCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a></td>
+                <td><i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i></td>
               </tr>
               <tr>
                 <td>12</td>
@@ -358,12 +317,8 @@
                 <td>15/12/2020</td>
                 <td>Filan Fisteku</td>
                 <td>$120,00</td>
-                <td>
-                  <div class="buttons">
-                    <a href="./productCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a>
-                    <i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i>
-                  </div>
-                </td>
+                <td><a href="./productCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a></td>
+                <td><i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i></td>
               </tr>
               <tr>
                 <td>12</td>
@@ -374,28 +329,8 @@
                 <td>15/12/2020</td>
                 <td>Filan Fisteku</td>
                 <td>$120,00</td>
-                <td>
-                  <div class="buttons">
-                    <a href="./productCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a>
-                    <i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>12</td>
-                <td>HyperX Headset</td>
-                <td title="HyperX Cloud headset is a PlayStation® Official Licensed Product. Experience HyperX signature comfort with its plush memory foam ear cushions wrapped in premium leatherette. Immersive yourself in the game world with crystal-clear audio and enhanced bass">HyperX Cloud headset is a PlayStation® Official Licensed Product. Experience HyperX signature comfort with its plush memory foam ear cushions wrapped in premium leatherette. Immersive yourself in the game world with crystal-clear audio and enhanced bass</td>
-                <td>Electronics</td>
-                <td>22</td>
-                <td>15/12/2020</td>
-                <td>Filan Fisteku</td>
-                <td>$120,00</td>
-                <td>
-                  <div class="buttons">
-                    <a href="./productCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a>
-                    <i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i>
-                  </div>
-                </td>
+                <td><a href="./productCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a></td>
+                <td><i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i></td>
               </tr>
             </tbody>
           </table>

@@ -29,7 +29,9 @@
         $("#example").DataTable({
           responsive: true,
           columnDefs: [
-            { responsivePriority: 1, targets: -1, orderable: false }
+            { width: "10px", targets: [-1,-2] },
+            { responsivePriority: 1, targets: -1, orderable: false },
+            { responsivePriority: 2, targets: -2, orderable: false }
           ]
         });
       });
@@ -170,6 +172,7 @@
                 <th>Status</th>
                 <th>Notes</th>
                 <th></th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
@@ -181,12 +184,8 @@
                 <td>8</td>
                 <td style="color: orange">Pending</td>
                 <td><a onclick="openModal(this)" id="viewNotesBtn" href="#" style="color: blue">View Notes</a></td>
-                <td>
-                  <div class="buttons">
-                    <a href="./inventoryCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a>
-                    <i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i>
-                  </div>
-                </td>
+                <td><a href="./inventoryCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a></td>
+                <td><i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i></td>
               </tr>
               <tr>
                 <td>53</td>
@@ -196,12 +195,8 @@
                 <td>8</td>
                 <td style="color: orange">Pending</td>
                 <td><a onclick="openModal(this)" id="viewNotesBtn" href="#" style="color: blue">View Notes</a></td>
-                <td>
-                  <div class="buttons">
-                    <a href="./inventoryCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a>
-                    <i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i>
-                  </div>
-                </td>
+                <td><a href="./inventoryCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a></td>
+                <td><i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i></td>
               </tr>
               <tr>
                 <td>53</td>
@@ -211,12 +206,8 @@
                 <td>8</td>
                 <td style="color: orange">Pending</td>
                 <td><a onclick="openModal(this)" id="viewNotesBtn" href="#" style="color: blue">View Notes</a></td>
-                <td>
-                  <div class="buttons">
-                    <a href="./inventoryCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a>
-                    <i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i>
-                  </div>
-                </td>
+                <td><a href="./inventoryCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a></td>
+                <td><i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i></td>
               </tr>
               <tr>
                 <td>53</td>
@@ -226,12 +217,8 @@
                 <td>8</td>
                 <td style="color: orange">Pending</td>
                 <td><a onclick="openModal(this)" id="viewNotesBtn" href="#" style="color: blue">View Notes</a></td>
-                <td>
-                  <div class="buttons">
-                    <a href="./inventoryCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a>
-                    <i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i>
-                  </div>
-                </td>
+                <td><a href="./inventoryCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a></td>
+                <td><i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i></td>
               </tr>
               <tr>
                 <td>53</td>
@@ -241,12 +228,8 @@
                 <td>8</td>
                 <td style="color: orange">Pending</td>
                 <td><a onclick="openModal(this)" id="viewNotesBtn" href="#" style="color: blue">View Notes</a></td>
-                <td>
-                  <div class="buttons">
-                    <a href="./inventoryCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a>
-                    <i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i>
-                  </div>
-                </td>
+                <td><a href="./inventoryCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a></td>
+                <td><i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i></td>
               </tr>
               <tr>
                 <td>53</td>
@@ -256,12 +239,8 @@
                 <td>8</td>
                 <td style="color: orange">Pending</td>
                 <td><a onclick="openModal(this)" id="viewNotesBtn" href="#" style="color: blue">View Notes</a></td>
-                <td>
-                  <div class="buttons">
-                    <a href="./inventoryCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a>
-                    <i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i>
-                  </div>
-                </td>
+                <td><a href="./inventoryCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a></td>
+                <td><i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i></td>
               </tr>
               <tr>
                 <td>53</td>
@@ -271,12 +250,8 @@
                 <td>8</td>
                 <td style="color: orange">Pending</td>
                 <td><a onclick="openModal(this)" id="viewNotesBtn" href="#" style="color: blue">View Notes</a></td>
-                <td>
-                  <div class="buttons">
-                    <a href="./inventoryCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a>
-                    <i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i>
-                  </div>
-                </td>
+                <td><a href="./inventoryCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a></td>
+                <td><i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i></td>
               </tr>
               <tr>
                 <td>53</td>
@@ -286,12 +261,8 @@
                 <td>8</td>
                 <td style="color: orange">Pending</td>
                 <td><a onclick="openModal(this)" id="viewNotesBtn" href="#" style="color: blue">View Notes</a></td>
-                <td>
-                  <div class="buttons">
-                    <a href="./inventoryCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a>
-                    <i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i>
-                  </div>
-                </td>
+                <td><a href="./inventoryCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a></td>
+                <td><i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i></td>
               </tr>
               <tr>
                 <td>53</td>
@@ -301,12 +272,8 @@
                 <td>8</td>
                 <td style="color: orange">Pending</td>
                 <td><a onclick="openModal(this)" id="viewNotesBtn" href="#" style="color: blue">View Notes</a></td>
-                <td>
-                  <div class="buttons">
-                    <a href="./inventoryCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a>
-                    <i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i>
-                  </div>
-                </td>
+                <td><a href="./inventoryCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a></td>
+                <td><i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i></td>
               </tr>
               <tr>
                 <td>53</td>
@@ -316,12 +283,8 @@
                 <td>8</td>
                 <td style="color: orange">Pending</td>
                 <td><a onclick="openModal(this)" id="viewNotesBtn" href="#" style="color: blue">View Notes</a></td>
-                <td>
-                  <div class="buttons">
-                    <a href="./inventoryCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a>
-                    <i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i>
-                  </div>
-                </td>
+                <td><a href="./inventoryCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a></td>
+                <td><i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i></td>
               </tr>
               <tr>
                 <td>53</td>
@@ -331,12 +294,8 @@
                 <td>8</td>
                 <td style="color: orange">Pending</td>
                 <td><a onclick="openModal(this)" id="viewNotesBtn" href="#" style="color: blue">View Notes</a></td>
-                <td>
-                  <div class="buttons">
-                    <a href="./inventoryCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a>
-                    <i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i>
-                  </div>
-                </td>
+                <td><a href="./inventoryCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a></td>
+                <td><i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i></td>
               </tr>
               <tr>
                 <td>53</td>
@@ -346,12 +305,8 @@
                 <td>8</td>
                 <td style="color: orange">Pending</td>
                 <td><a onclick="openModal(this)" id="viewNotesBtn" href="#" style="color: blue">View Notes</a></td>
-                <td>
-                  <div class="buttons">
-                    <a href="./inventoryCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a>
-                    <i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i>
-                  </div>
-                </td>
+                <td><a href="./inventoryCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a></td>
+                <td><i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i></td>
               </tr>
               <tr>
                 <td>53</td>
@@ -361,12 +316,8 @@
                 <td>8</td>
                 <td style="color: orange">Pending</td>
                 <td><a onclick="openModal(this)" id="viewNotesBtn" href="#" style="color: blue">View Notes</a></td>
-                <td>
-                  <div class="buttons">
-                    <a href="./inventoryCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a>
-                    <i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i>
-                  </div>
-                </td>
+                <td><a href="./inventoryCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a></td>
+                <td><i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i></td>
               </tr>
               <tr>
                 <td>53</td>
@@ -376,12 +327,19 @@
                 <td>8</td>
                 <td style="color: orange">Pending</td>
                 <td><a onclick="openModal(this)" id="viewNotesBtn" href="#" style="color: blue">View Notes</a></td>
-                <td>
-                  <div class="buttons">
-                    <a href="./inventoryCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a>
-                    <i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i>
-                  </div>
-                </td>
+                <td><a href="./inventoryCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a></td>
+                <td><i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i></td>
+              </tr>
+              <tr>
+                <td>53</td>
+                <td>Lenovo Laptop</td>
+                <td>Filan Fisteku</td>
+                <td>Fisteku Filan</td>
+                <td>8</td>
+                <td style="color: orange">Pending</td>
+                <td><a onclick="openModal(this)" id="viewNotesBtn" href="#" style="color: blue">View Notes</a></td>
+                <td><a href="./inventoryCRUD.html"><i class="fas fa-pen" style="color: var(--clr-secondary-dark);"></i></a></td>
+                <td><i id="deleteBtn" onclick="openModal(this)" class="fas fa-trash-alt" style="color: red"></i></td>
               </tr>
             </tbody>
           </table>
