@@ -29,7 +29,9 @@
         $("#example").DataTable({
           responsive: true,
           columnDefs: [
+            { width: "10px", targets: [-1,-2] },
             { responsivePriority: 1, targets: -1, orderable: false },
+            { responsivePriority: 2, targets: -2, orderable: false }
           ],
         });
       });
@@ -139,6 +141,7 @@
                 <th>Status</th>
                 <th>Notes</th>
                 <th></th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
@@ -150,102 +153,8 @@
                 <td>15-12-2021</td>
                 <td style="color: orange">Pending</td>
                 <td><a id="viewNotesBtn" href="#" onclick="openModal(this)" style="color: blue">View Notes</a></td>
-                <td>
-                  <div class="buttons">
-                    <i id="receiveBtn" class="fas fa-check" style="color: rgb(12, 211, 12)" onclick="openModal(this)"></i>
-                    <i id="rejectBtn" class="fas fa-times" style="color: red" onclick="openModal(this)"></i>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>53</td>
-                <td>Lenovo Laptop</td>
-                <td>Fisteku Filan</td>
-                <td>8</td>
-                <td>15-12-2021</td>
-                <td style="color: orange">Pending</td>
-                <td><a id="viewNotesBtn" href="#" onclick="openModal(this)" style="color: blue">View Notes</a></td>
-                <td>
-                  <div class="buttons">
-                    <i id="receiveBtn" class="fas fa-check" style="color: rgb(12, 211, 12)" onclick="openModal(this)"></i>
-                    <i id="rejectBtn" class="fas fa-times" style="color: red" onclick="openModal(this)"></i>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>53</td>
-                <td>Lenovo Laptop</td>
-                <td>Fisteku Filan</td>
-                <td>8</td>
-                <td>15-12-2021</td>
-                <td style="color: orange">Pending</td>
-                <td><a id="viewNotesBtn" href="#" onclick="openModal(this)" style="color: blue">View Notes</a></td>
-                <td>
-                  <div class="buttons">
-                    <i id="receiveBtn" class="fas fa-check" style="color: rgb(12, 211, 12)" onclick="openModal(this)"></i>
-                    <i id="rejectBtn" class="fas fa-times" style="color: red" onclick="openModal(this)"></i>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>53</td>
-                <td>Lenovo Laptop</td>
-                <td>Fisteku Filan</td>
-                <td>8</td>
-                <td>15-12-2021</td>
-                <td style="color: orange">Pending</td>
-                <td><a id="viewNotesBtn" href="#" onclick="openModal(this)" style="color: blue">View Notes</a></td>
-                <td>
-                  <div class="buttons">
-                    <i id="receiveBtn" class="fas fa-check" style="color: rgb(12, 211, 12)" onclick="openModal(this)"></i>
-                    <i id="rejectBtn" class="fas fa-times" style="color: red" onclick="openModal(this)"></i>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>53</td>
-                <td>Lenovo Laptop</td>
-                <td>Fisteku Filan</td>
-                <td>8</td>
-                <td>15-12-2021</td>
-                <td style="color: orange">Pending</td>
-                <td><a id="viewNotesBtn" href="#" onclick="openModal(this)" style="color: blue">View Notes</a></td>
-                <td>
-                  <div class="buttons">
-                    <i id="receiveBtn" class="fas fa-check" style="color: rgb(12, 211, 12)" onclick="openModal(this)"></i>
-                    <i id="rejectBtn" class="fas fa-times" style="color: red" onclick="openModal(this)"></i>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>53</td>
-                <td>Lenovo Laptop</td>
-                <td>Fisteku Filan</td>
-                <td>8</td>
-                <td>15-12-2021</td>
-                <td style="color: orange">Pending</td>
-                <td><a id="viewNotesBtn" href="#" onclick="openModal(this)" style="color: blue">View Notes</a></td>
-                <td>
-                  <div class="buttons">
-                    <i id="receiveBtn" class="fas fa-check" style="color: rgb(12, 211, 12)" onclick="openModal(this)"></i>
-                    <i id="rejectBtn" class="fas fa-times" style="color: red" onclick="openModal(this)"></i>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>53</td>
-                <td>Lenovo Laptop</td>
-                <td>Fisteku Filan</td>
-                <td>8</td>
-                <td>15-12-2021</td>
-                <td style="color: orange">Pending</td>
-                <td><a id="viewNotesBtn" href="#" onclick="openModal(this)" style="color: blue">View Notes</a></td>
-                <td>
-                  <div class="buttons">
-                    <i id="receiveBtn" class="fas fa-check" style="color: rgb(12, 211, 12)" onclick="openModal(this)"></i>
-                    <i id="rejectBtn" class="fas fa-times" style="color: red" onclick="openModal(this)"></i>
-                  </div>
-                </td>
+                <td><i id="receiveBtn" class="fas fa-check" style="color: rgb(12, 211, 12)" onclick="openModal(this)"></i></td>
+                <td><i id="rejectBtn" class="fas fa-times" style="color: red" onclick="openModal(this)"></i></td>
               </tr>
             </tbody>
           </table>
